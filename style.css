@@ -18,6 +18,7 @@ body {
   justify-content: center;
   font-family: cursive;
   text-shadow: 0 0 1px rgb(61, 61, 61);
+  overflow-y: scroll;
 }
 
 .notesContainer {
@@ -27,6 +28,7 @@ body {
   grid-gap: 1rem;
   min-width: 95%;
   max-width: 95%;
+  overflow-y: auto;
 }
 
 
@@ -46,6 +48,7 @@ body {
   backdrop-filter: blur(5px);
   color: rgb(29, 28, 28);
   box-shadow: -3px 2px 12px -1px gray;
+  
 }
 /* .noteCard:hover{
   transform: scale(1.02);
@@ -139,10 +142,10 @@ hr {
   background: rgb(255, 31, 31);
 }
 
-@media only screen and  (max-width: 600px){
+@media only screen and  (max-width: 850px){
   .notesContainer{
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   .header{
     width: 90%;
@@ -157,7 +160,7 @@ hr {
     width: 90%;
   }
 }
-@media only screen and  (max-width: 400px){
+@media only screen and  (max-width: 500px){
   .notesContainer{
     display: grid;
     grid-template-columns: 1fr 1fr ;
