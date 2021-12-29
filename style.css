@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  overflow: hidden;
+}
+body {
+  background-image: linear-gradient(
+    110.1deg,
+    rgba(30, 2, 83, 1) 44.2%,
+    rgba(198, 55, 160, 1) 138.2%
+  );
+  color: rgb(255, 255, 255);
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: cursive;
+  text-shadow: 0 0 1px rgb(61, 61, 61);
+}
+
+.notesContainer {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1rem;
+  min-width: 95%;
+  max-width: 95%;
+}
+
+
+.noteCard {
+  /* border: 2px solid rgb(44, 44, 44); */
+  width: 100%;
+  height: max-content;
+  border-radius: 1rem;
+  padding: 1.2rem;
+  padding-bottom: 3.5rem;
+  /* background-image: linear-gradient(
+    117deg,
+    rgba(123, 216, 96, 1) 39.2%,
+    rgba(255, 255, 255, 1) 156.2%
+  ); */
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  color: rgb(29, 28, 28);
+  box-shadow: -3px 2px 12px -1px gray;
+}
+/* .noteCard:hover{
+  transform: scale(1.02);
+} */
+.title {
+  margin-bottom: 0.7rem;
+}
+hr {
+  margin-top: 0.7rem;
+  color: rgb(12, 11, 11);
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1rem;
+  border: 2px solid rgb(44, 44, 44);
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+#noteTitle {
+  background-color: transparent;
+  margin: 0.5rem;
+  border-radius: 1rem;
+  color: rgb(44, 44, 44);
+  height: 2rem;
+  border: none;
+  border-bottom: 1px rgb(44, 44, 44);
+  padding: 0 1rem;
+}
+#noteBody {
+  background-color: transparent;
+  margin: 0.5rem;
+  border-radius: 1rem;
+  color: rgb(44, 44, 44);
+  margin-top: -4px;
+  border: none;
+  border-bottom: 1px rgb(44, 44, 44);
+  padding: 0.4rem 1rem;
+}
+::placeholder {
+  color: white;
+  font-family: cursive;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#addNotebtn {
+  width: 50%;
+  margin: 0.5rem auto;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  font-family: cursive;
+  font-size: 18px;
+}
+
+#addNotebtn:hover {
+  transform: scale(1.05);
+  background-color: yellowgreen;
+}
+.deleteNotebtn {
+  width: 100%;
+  height: 2rem;
+  margin: 0;
+  position: fixed;
+  left: 0;
+  border: none;
+  border-radius: 0 0 16px 15px;
+  bottom: 0;
+  margin-top: 1rem;
+  transition: 300ms;
+  background-image: linear-gradient(
+    117deg,
+    rgba(123, 216, 96, 1) 39.2%,
+    rgba(255, 255, 255, 1) 156.2%
+  );
+}
+.deleteNotebtn:hover {
+  background: rgb(255, 31, 31);
+}
+
+@media only screen and  (max-width: 600px){
+  .notesContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+  }
+  .header{
+    width: 90%;
+  }
+}
+@media only screen and  (max-width: 700px){
+  .notesContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .header{
+    width: 90%;
+  }
+}
+@media only screen and  (max-width: 400px){
+  .notesContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+  }
+  .header{
+    width: 90%;
+  }
+}
